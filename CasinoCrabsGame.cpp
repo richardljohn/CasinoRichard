@@ -12,7 +12,7 @@ int main() {
     double chances, count;
     char repeat = 'Y';
     
-    while (count < 10000 && repeat == 'Y') {
+    while (repeat == 'Y') {
         d1 = rand() % 6 + 1;
         cout << d1 << endl;
         d2 = rand() % 6 + 1;

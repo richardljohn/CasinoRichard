@@ -13,6 +13,6 @@ class Player {
         int setBet(int bet);
 
     private:
-        double money = 100.0;
+        double money = 100.00;
         string name;
 };
