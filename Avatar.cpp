@@ -1,3 +1,0 @@
-//Class Avatar implementation 
-
-
