@@ -10,7 +10,7 @@ class Player {
         Player();
         Player(string name_);
         void setName(string name_);
-        int setBet(int bet);
+        int getMoney();
 
     private:
         double money = 100.00;

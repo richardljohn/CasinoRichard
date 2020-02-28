@@ -15,3 +15,7 @@ Player::Player(string name_){
 void Player::setName(string name_){
     name = name_;
 }
+
+int Player::getMoney(){
+    return money;
+}
