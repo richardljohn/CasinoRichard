@@ -52,6 +52,7 @@ void Craps::summary(){
 void Craps::playCraps(){
     setBet();
     srand(time(0));
+    repeat = 'Y';
     while (repeat == 'Y') {
         roll = diceRoll();
         if ((roll == 7) || (roll == 11)) {

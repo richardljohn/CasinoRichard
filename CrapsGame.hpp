@@ -20,5 +20,5 @@ class Craps: public Player{
     private: 
         int d1, d2, roll, point, wins, losses, newRoll;
         double chances, count, bet; 
-        char repeat = 'Y'; 
+        char repeat; 
 };
