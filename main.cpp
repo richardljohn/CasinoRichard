@@ -2,8 +2,7 @@
 //This is the Casino Richard Simulation. 
 
 #include "CrapsGame.hpp"
-#include "CrapsGame.cpp"
-#include "Player.cpp"
+
 #include "Player.hpp"
 
 #include <iostream>

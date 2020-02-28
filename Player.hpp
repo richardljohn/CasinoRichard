@@ -11,7 +11,7 @@ class Player {
         Player();
         void getName();
         void setName(string name_);
-        double getMoney();
+        double getMoney() const;
         double setMoney(double mon);
 
     private:

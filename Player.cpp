@@ -18,6 +18,6 @@ double Player::setMoney(double mon){
     money = mon;
 }
 
-double Player::getMoney(){
+double Player::getMoney() const{
     return money;
 }
