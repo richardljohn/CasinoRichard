@@ -11,6 +11,7 @@ class Player {
         Player(string name_);
         void setName(string name_);
         int getMoney();
+        int setMoney(int mon);
 
     private:
         double money = 100.00;

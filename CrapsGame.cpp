@@ -8,12 +8,12 @@ Craps::Craps(){
 
 }
 
-int Craps::setBet(){
-    cout << "How much would you like to bet?: ";
+double Craps::setBet(){
+    cout << "How much would you like to bet?: $";
     cin >> bet;
     while(bet > getMoney()){
-        cout << "You do not have enough money to place your bet." << endl;
-        cout << "How much would you like to bet?: "; 
+        cout << "You do not have enough money to place your bet.";
+        cout << "How much would you like to bet?: $"; 
         cin >> bet;  
     }
 }
@@ -26,6 +26,30 @@ int Craps::diceRoll(){
     return diceTotal;
 }
 
+double Craps::win(double amount){
+    int money_;
+    money_ = getMoney();
+    money_ += amount;
+    setMoney(money_);
+}
+
+double Craps::lose(double amount){
+    int money_;
+    money_ = getMoney();
+    money_ -= amount;
+    setMoney(money_);
+}
+
+void Craps::summary(){
+    cout << "\n\n";
+    chances = (wins / count);
+    cout << "Your total earnings are: " << getMoney() << " $." << endl;
+    cout << "You played " << count << " games." << endl;
+    cout << "You won " << wins << " times." << endl;
+    cout << "You lost " << losses << " times." << endl;
+    cout << "Your win to loss ratio is " << chances * 100 << " percent." << endl;
+}
+
 int Craps::playCraps(){
     setBet();
     srand(time(0));
@@ -34,6 +58,7 @@ int Craps::playCraps(){
         if ((roll == 7) || (roll == 11)) {
             cout << "You win! :)" << endl;
             count++;
+            win(bet);
             wins++;
             cout << "Another game?! Y(es) or N(o)" << endl;                
             cin >> repeat;
@@ -41,6 +66,7 @@ int Craps::playCraps(){
         }
         else if ((roll == 2) || (roll == 3) || (roll == 12)) {
             cout << "You lose... :(" << endl;
+            lose(bet);
             count++;
             losses++;
             cout << "Another game??.... Y(es) or N(o)" << endl;
@@ -58,6 +84,7 @@ int Craps::playCraps(){
             cout << newRoll << endl;
             if (newRoll == point) {
                 cout << "You win! :)" << endl;
+                win(bet);
                 count++;
                 wins++;
                 cout << "Another game?! Y(es) or N(o)" << endl;
@@ -68,6 +95,7 @@ int Craps::playCraps(){
             }
             else if (newRoll == 7) {
                 cout << "You lose... :(" << endl;
+                lose(bet);
                 count++;
                 losses++;
                 cout << "Another game??... Y(es) or N(o)" << endl;
@@ -83,4 +111,5 @@ int Craps::playCraps(){
             }
         }
     }
+    summary();
 }

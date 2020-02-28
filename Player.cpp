@@ -16,6 +16,10 @@ void Player::setName(string name_){
     name = name_;
 }
 
+int Player::setMoney(int mon){
+    money = mon;
+}
+
 int Player::getMoney(){
     return money;
 }

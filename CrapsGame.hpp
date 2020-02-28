@@ -12,10 +12,13 @@ class Craps: public Player{
         int diceRoll();
         int playCraps();
         int getMoney();
-        int setBet();
+        double setBet();
+        double win(double amount);
+        double lose(double amount);
+        void summary();
 
     private: 
-        int d1, d2, roll, point, wins, losses, newRoll, bet;
-        double chances, count; 
+        int d1, d2, roll, point, wins, losses, newRoll;
+        double chances, count, bet; 
         char repeat = 'Y'; 
 };
