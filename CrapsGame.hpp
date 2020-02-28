@@ -1,5 +1,6 @@
 //Name: This will let you play craps in the Casino Richard. 
 
+#pragma once
 #include <iostream>
 #include <cmath>
 #include <ctime>

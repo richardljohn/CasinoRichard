@@ -27,14 +27,14 @@ int Craps::diceRoll(){
 }
 
 double Craps::win(double amount){
-    int money_;
+    double money_;
     money_ = getMoney();
     money_ += amount;
     setMoney(money_);
 }
 
 double Craps::lose(double amount){
-    int money_;
+    double money_;
     money_ = getMoney();
     money_ -= amount;
     setMoney(money_);

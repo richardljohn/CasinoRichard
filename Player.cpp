@@ -7,11 +7,6 @@ Player::Player(){
 
 }
 
-Player::Player(string name_){
-    setName(name_);
-    name = name_;
-}
-
 void Player::getName(){
     cout << name;
 }
@@ -19,7 +14,7 @@ void Player::setName(string name_){
     name = name_;
 }
 
-double Player::setMoney(int mon){
+double Player::setMoney(double mon){
     money = mon;
 }
 
