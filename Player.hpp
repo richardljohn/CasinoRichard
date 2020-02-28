@@ -9,6 +9,7 @@ class Player {
     public:
         Player();
         Player(string name_);
+        void getName();
         void setName(string name_);
         int getMoney();
         int setMoney(int mon);

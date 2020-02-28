@@ -12,6 +12,9 @@ Player::Player(string name_){
     name = name_;
 }
 
+void Player::getName(){
+    return name;
+}
 void Player::setName(string name_){
     name = name_;
 }
