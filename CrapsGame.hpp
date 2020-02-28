@@ -7,7 +7,7 @@
 #include "Player.hpp"
 using namespace std; 
 
-class Craps: public Player{ 
+class Craps: public Player { 
     public: 
         Craps();
         int diceRoll();

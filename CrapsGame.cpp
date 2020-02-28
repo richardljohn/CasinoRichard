@@ -3,7 +3,7 @@
 #include "CrapsGame.hpp"
 #include "Player.hpp"
 
-Craps::Craps():Player(){
+Craps::Craps():Player() {
 
 }
 
