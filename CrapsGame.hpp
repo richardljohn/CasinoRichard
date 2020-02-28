@@ -10,8 +10,7 @@ class Craps: public Player{
     public: 
         Craps();
         int diceRoll();
-        int playCraps();
-        int getMoney();
+        void playCraps();
         double setBet();
         double win(double amount);
         double lose(double amount);

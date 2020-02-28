@@ -11,10 +11,10 @@ class Player {
         Player(string name_);
         void getName();
         void setName(string name_);
-        int getMoney();
-        int setMoney(int mon);
+        double getMoney();
+        double setMoney(int mon);
 
     private:
-        double money = 100.00;
+        double money;
         string name;
 };

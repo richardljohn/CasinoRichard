@@ -2,19 +2,22 @@
 //This is the Casino Richard Simulation. 
 
 #include "CrapsGame.hpp"
+#include "CrapsGame.cpp"
+#include "Player.cpp"
 #include "Player.hpp"
 #include <iostream>
 #include <string>
 using namespace std;
 
 int main(){
-    string name, game;
+    string Play, name, game;
     char anothaOne;
     cout << "Hello valued guest." << endl; 
     cout << "Welcome to the Casino Richard, where so many things are possible.";
     cout << "What is your name: ";
-    cin >> name;
-    Player.setName(name);
+    cin >> Play >> name;
+    Player Play;
+    Play.setName(name);
     cout << "At the Casino Richard we have a wide selection of games to play." << endl;
     cout << "Craps" << endl;
     cout << "Blackjack" << endl; 
@@ -22,7 +25,8 @@ int main(){
     cin >> game; 
 
     if (game == "Craps") {
-        playCraps();
+        Craps Craps_;
+        Craps_.playCraps();
         cout << "Would you like to play another game? (Y)es or (N)o?: "; 
         cin >> anothaOne;
         cout << "What would you like to play?: " << endl;

@@ -50,7 +50,7 @@ void Craps::summary(){
     cout << "Your win to loss ratio is " << chances * 100 << " percent." << endl;
 }
 
-int Craps::playCraps(){
+void Craps::playCraps(){
     setBet();
     srand(time(0));
     while (repeat == 'Y') {
