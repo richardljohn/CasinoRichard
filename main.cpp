@@ -13,6 +13,7 @@ int main(){
     string name, game;
     double cash;
     char anothaOne;
+    //Introductions 
     cout << "Hello valued guest." << endl; 
     cout << "Welcome to the Casino Richard, where so many things are possible.";
     cout << "What is your name: ";
