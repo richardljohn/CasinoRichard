@@ -1,4 +1,5 @@
-//Name: This will let you play craps in the Casino Richard. 
+//Name: This will let you play Craps in the Casino Richard. 
+//File: These are all the methods for Craps. 
 
 #include "CrapsGame.hpp"
 #include "Player.hpp"
