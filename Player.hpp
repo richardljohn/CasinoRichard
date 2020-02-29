@@ -1,20 +1,11 @@
-//This is the class player. 
-//He or she is your avatar for your game. 
+//This is the Player. 
+//This is your avatar. 
 
-#pragma once
 #include <iostream>
-#include <string>
 using namespace std;
 
-class Player {
-    public:
-        Player();
-        void getName();
-        void setName(string name_);
-        double getMoney() const;
-        double setMoney(double mon);
+string name; 
+double money;
 
-    private:
-        double money;
-        string name;
-};
+void setName();
+double setMoney();

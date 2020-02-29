@@ -1,23 +1,16 @@
-//This is the class Player. 
+//This is the Player. 
 //This is your avatar. 
 
 #include "Player.hpp"
+#include <iostream>
+using namespace std;
 
-Player::Player(){
-
+void setName(){
+    cout << "What is your name?\n";
+    cin >> name;
 }
 
-void Player::getName(){
-    cout << name;
-}
-void Player::setName(string name_){
-    name = name_;
-}
-
-double Player::setMoney(double mon){
-    money = mon;
-}
-
-double Player::getMoney() const{
-    return money;
+double setMoney(){
+    cout << "How much money do you have?\n$";
+    cin >> money;
 }
