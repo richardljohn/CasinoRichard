@@ -42,13 +42,13 @@ double setBet(){
 //Will show you how much money you have left after a win. 
 double win(double amount){
     money = money + amount;
-    cout << "You now have " << money << "dollars left." << endl;
-}
+    cout << "You now have " << money << " dollars left." << endl;
+} 
 
 //Will show you how much money you have left after a loss. 
 double lose(double amount){
     money = money - amount;
-    cout << "You now have " << money << "dollars left." << endl;
+    cout << "You now have " << money << " dollars left." << endl;
 }
 
 //Simulates Craps games. 
@@ -120,7 +120,7 @@ void playCraps(){
 void summary(){
     cout << "\n";
     chances = (wins / number);
-    cout << "Your total earnings are: " << money << " $." << endl;
+    cout << "Your total earnings are: " << "$" << money << " dollars." << endl;
     cout << "You played " << number << " games." << endl;
     cout << "You won " << wins << " times." << endl;
     cout << "You lost " << losses << " times." << endl;
