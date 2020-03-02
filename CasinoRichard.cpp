@@ -7,8 +7,8 @@ using namespace std;
 
 string name; 
 double bet, chances, money;
+double games = 0.0;
 int wins, losses, d1, d2, roll, point, newRoll;
-int number = 0; 
 char repeat;
 
 //Craps Prototype Functions. 
@@ -60,7 +60,7 @@ void playCraps(){
         roll = diceRoll();
         if ((roll == 7) || (roll == 11)) {
             cout << "You win! :)" << endl;
-            number++;
+            games++;
             win(bet);
             wins++;
             cout << "Another game?! Y(es) or N(o)" << endl;                
@@ -70,7 +70,7 @@ void playCraps(){
         else if ((roll == 2) || (roll == 3) || (roll == 12)) {
             cout << "You lose... :(" << endl;
             lose(bet);
-            number++;
+            games++;
             losses++;
             cout << "Another game??.... Y(es) or N(o)" << endl;
             cin >> repeat;
@@ -88,7 +88,7 @@ void playCraps(){
             if (newRoll == point) {
                 cout << "You win! :)" << endl;
                 win(bet);
-                number++;
+                games++;
                 wins++;
                 cout << "Another game?! Y(es) or N(o)" << endl;
                 cin >> repeat;
@@ -99,7 +99,7 @@ void playCraps(){
             else if (newRoll == 7) {
                 cout << "You lose... :(" << endl;
                 lose(bet);
-                number++;
+                games++;
                 losses++;
                 cout << "Another game??... Y(es) or N(o)" << endl;
                 cin >> repeat;
@@ -118,10 +118,11 @@ void playCraps(){
 }
 
 void summary(){
+    cout << name; 
     cout << "\n";
-    chances = (wins / number);
+    chances = (wins / games);
     cout << "Your total earnings are: " << "$" << money << " dollars." << endl;
-    cout << "You played " << number << " games." << endl;
+    cout << "You played " << games << " games." << endl;
     cout << "You won " << wins << " times." << endl;
     cout << "You lost " << losses << " times." << endl;
     cout << "Your win to loss ratio is " << chances * 100 << " percent." << endl;
